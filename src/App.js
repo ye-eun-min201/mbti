@@ -36,7 +36,7 @@ const updateScore=(type,value)=> {
     <Routes>
     <Route path="/" element={<Start setNum={setNum}/>}/>
     <Route path="/question" element={<Question num={num} updateScore={updateScore} setNum={setNum} />}/>
-    <Route path="/result" element={<Result score={score} resultSate={resetState} />}/>
+    <Route path="/result" element={<Result score={score} resetState={resetState} />}/>
   </Routes>
   );
 }
