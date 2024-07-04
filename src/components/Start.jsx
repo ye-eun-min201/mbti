@@ -7,14 +7,14 @@ function Start() {
 
   return (
     <div className="content" id="start">
-      <p>나와 닮은 짱구 캐릭터 테스트</p>
+      <p>나의 퍼스널컬러는 무엇일까?</p>
       <img src={bannerImage} alt="짱구단체" className="img1" />
-      <p id="maker">제작자: 이나경</p>
+      <p id="maker">제작자: 임예은</p>
       <p id="require">
-        ※단순히 재미로 제작한 것이며, 오수나 훈이가 나와도 화내지 말아주세요!
+        ※자가 진단을 통해서 나의 퍼스널컬러를 알아봐요!
       </p>
       <button className="btn btn-warning" onClick={() => navigate('/question')}>
-        떡잎마을로 출발~
+        퍼스널컬러 진단 시작!!
       </button>
     </div>
   );

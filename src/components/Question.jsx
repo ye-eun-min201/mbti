@@ -1,143 +1,189 @@
-import qs1 from '../image/qs1.png';
-import qs2 from '../image/qs2.png';
-import qs3 from '../image/qs3.png';
-import qs4 from '../image/qs4.png';
-import qs5 from '../image/qs5.png';
-import qs6 from '../image/qs6.png';
-import qs7 from '../image/qs7.png';
-import qs8 from '../image/qs8.png';
-import qs9 from '../image/qs9.png';
-import qs10 from '../image/qs10.png';
-import qs11 from '../image/qs11.png';
-import qs12 from '../image/qs12.png';
-import '../App.css';
 import { useNavigate } from 'react-router-dom';
+import qs1 from '../image/qs1.jpg'
+import qs2 from '../image/qs2.jpg';
+import qs3 from '../image/qs3.jpg';
+import qs4 from '../image/qs4.jpg';
+import qs5 from '../image/qs5.jpg';
+import qs6 from '../image/qs6.jpg';
+import qs7 from '../image/qs7.jpg';
+import qs8 from '../image/qs8.jpg';
+import qs9 from '../image/qs9.jpeg';
+import qs10 from '../image/qs10.jpeg';
+import qs11 from '../image/qs11.jpg';
+import qs12 from '../image/qs12.jpg';
+import qs13 from '../image/qs13.jpg';
+import qs14 from '../image/qs14.jpg';
+import '../App.css';
 
 const questions = {
   1: {
-    title: '아무일도 없는 나른한 오후, 친구가 놀자며 카톡을 보냈다.',
+    title: '평소 립스틱 컬러는?',
     image: qs1,
-    type: 'EI',
-    A: '빠르게 준비를 마치고 친구를 만나러 나간다.',
-    B: '얼마만의 휴일인데... 집에서 휴식을 취한다.',
+    type: 'WC',
+    A: '오렌지 & 코랄 계열이 잘 어울린다.',
+    B: '핑크 컬러가 잘 어울린다.',
   },
   2: {
-    title: '소개팅을 갔는데 분위기가 너무 어색하다.',
+    title: '손목 안쪽 핏줄 컬러는?',
     image: qs2,
-    type: 'EI',
-    A: '어색함을 견디지 못하고 말을 먼저 꺼낸다.',
-    B: '너무 어색해 미치겠지만 가만히 있는다.',
+    type: 'WC',
+    A: '초록색이 많다.',
+    B: '파란색이 많다.',
   },
   3: {
-    title: '자취를 하려고 집을 구하러 다닌다.',
+    title: '헤어 컬러는?',
     image: qs3,
-    type: 'SN',
-    A: '방 구조, 수압, 방음 등을 꼼꼼하게 체크한다.',
-    B: '방이 화사한지, 넓은지, 포근한지 등을 본다.',
+    type: 'WC',
+    A: '비교적 밝은 브라운이다.',
+    B: '짙은 브라운 & 블랙이다.',
   },
   4: {
-    title: '바로 당장 내일이 시험인데 공부하기가 너무 싫다.',
+    title: '평소 잘 어울리는 주얼리는?',
     image: qs4,
-    type: 'SN',
-    A: '범위가 줄었으면 좋겠다. 이번 시험 잘 봐야 하는데..',
-    B: '시험은 왜 봐야 하는거지..? 시험이 사라지는 시대도 올까?',
+    type: 'WC',
+    A: '골드 주얼리',
+    B: '실버 주얼리',
   },
   5: {
-    title: '화났을 때 나는?',
+    title: '햇볕에 장시간 노출시',
     image: qs5,
-    type: 'TF',
-    A: '논리적으로 잘 말하면서 따진다.',
-    B: '할말이 많지만 너무 분해서 눈물부터 난다.',
+    type: 'WC',
+    A: '피부가 어두워지면서 탄다.',
+    B: '빨갛게 익는다.',
   },
   6: {
-    title: '고민을 얘기하는 친구, 듣다보니 친구의 잘못인 것 같다.',
+    title: '나의 분위기 및 이미지는?',
     image: qs6,
-    type: 'TF',
-    A: '친구의 잘못된 점을 말해준다.',
-    B: '직접적으로 말하면 친구가 상처받을까봐 돌려 말한다.',
+    type: 'SA',
+    A: '성숙 or 분위기 있는 이미지를 가지고 있다.',
+    B: '사랑스러운 or 귀여운 이미지를 가지고 있다.',
   },
   7: {
-    title: '준비물을 챙겨야할 때 나는?',
+    title: '옷은 어떨까?',
     image: qs7,
-    type: 'PJ',
-    A: '굳이 하루전에...? 당일날 챙기면 충분하다!',
-    B: '며칠 전에 미리 챙겨 준비해둔다!',
+    type: 'SA',
+    A: '비비드한 컬러보다 자연스러운 (카키 & 베이지 등) 컬러가 더 잘 어울린다.',
+    B: '퍼프 소매와 같은 소녀 감성의 옷도 곧잘 어울린다.',
   },
   8: {
-    title: '여행 계획을 짤 때 나는?',
+    title: '염색은 어떤 걸로 하면 좋을까?',
     image: qs8,
-    type: 'PJ',
-    A: '그때 그때 가고 싶은 곳 가고 먹고 싶은 것 먹는 것이 낭만이지!',
-    B: '버스 시간, 가격, 메뉴까지 미리 다 정해서 계획을 짜둔다.',
+    type: 'SA',
+    A: '짙은 브라운 염색이 가장 잘 어울린다.',
+    B: '밝은 브라운 컬러 염색도 어울린다.',
   },
   9: {
-    title: '곧 워터밤 페스티벌이 열린다고 한다.',
+    title: '내 피부는?',
     image: qs9,
-    type: 'EI',
-    A: '아껴뒀던 수영복과 물총을 꺼내 페스티벌을 즐기러 간다.',
-    B: '집에서도 충분히 즐길 수 있어! 유튜브로 시청한다.',
+    type: 'SA',
+    A: '홍조가 거의 없고, 균일한 스킨톤을 가지고 있다.',
+    B: '피부가 얇고 홍조가 있다.',
   },
   10: {
-    title: '비행기를 탔는데 갑자기 흔들린다.',
+    title: '메이크업 할 때 나는?',
     image: qs10,
-    type: 'SN',
-    A: '최대한 침착하며 안전벨트를 꽉 매고 주위를 살핀다.',
-    B: '비행기가 갑자기 추락하면 어쩌지?? 혹시 누가 테러를 일으킨 건 아닐까??',
+    type: 'SA',
+    A: '스모키 & 딥한 음영 아이 메이크업이 잘 어울린다. ',
+    B: '물광 피부 표현이 잘 어울린다.',
   },
   11: {
-    title: '친구가 갑자기 차 사고가 났다고 한다.',
+    title: '나의 이미지는?',
     image: qs11,
-    type: 'TF',
-    A: '헐 보험은 들어놨지?? 보험사에서는 뭐래??',
-    B: '헐 몸은 괜찮아?? 다친데는 없고...?',
+    type: 'WS',
+    A: '첫인상이 다가가기 어렵다거나 차가워 보인다는 이야기를 종종 듣는다.',
+    B: '청순한 이미지를 가지고 있다.',
   },
   12: {
-    title: '오랜만에 밖에서 외식을 하려고 한다.',
+    title: '나에게 잘 어울리는 립스틱 색은?',
     image: qs12,
-    type: 'PJ',
-    A: '같은 곳은 지겨워! 새로운 곳을 탐방한다!',
-    B: '매번 가던 곳으로! 편안하고 맛있어서 좋다.',
+    type: 'WS',
+    A: '레드립이 잘 어울린다.',
+    B: '파스텔톤의 부드러운 컬러가 잘 어울린다.',
+  },
+  13: {
+    title: '나에게 어울리는 염색 컬러는?',
+    image: qs13,
+    type: 'WS',
+    A: '진한 흑발이거나 진한 흑발 염색이 잘 어울린다.',
+    B: '그레이 컬러가 잘 어울린다.',
+  },
+  14: {
+    title: '나에게 잘 어울리는 옷은?',
+    image: qs14,
+    type: 'WS',
+    A: ' 정장(or 오피스룩)이 잘 어울린다.',
+    B: '캐주얼한 계열 (고프코어, 스트릿 등)보다 여성스러운 옷이 더 잘 어울린다.',
   },
 };
 
-function Question({num,setNum,updateScore}){
-    const navigate=useNavigate();
+function Question({ num, setNum, updateScore, score }) {
+  const navigate = useNavigate();
 
-    const handleAnswer=(type,value)=>{
-        updateScore(type,value);
+  const handleAnswer = (type, value) => {
+    updateScore(type, value);
+    const newScore = { ...score, [type]: (score[type] || 0) + value };
 
-        if(num<12){
-            setNum(num+1);
-        }else{
-            navigate('/result');
+    // 점수와 질문 번호 업데이트 로직
+    if (num === 5) {
+      if (newScore.WC >= 3) { // 5문제 중 3문제를 넘는 경우
+        setNum(6);
+      } else {
+        setNum(11);
+      }
+    } else if (num >= 6 && num <= 10) {
+      if (num === 10) {
+        if (newScore.SA >= 3) { // 5문제 중 3문제를 넘는 경우
+          navigate('/ResultAutumnWarm');
+        } else {
+          navigate('/ResultSpringWarm');
         }
+      } else {
+        setNum(num + 1);
+      }
+    } else if (num >= 11 && num <= 14) {
+      if (num === 14) {
+        if (newScore.WS >= 3) { // 4문제 중 3문제를 넘는 경우
+          navigate('/ResultWinterCool');
+        } else {
+          navigate('/ResultSummerCool');
+        }
+      } else {
+        setNum(num + 1);
+      }
+    } else {
+      setNum(num + 1);
     }
-    const currentQuestion=questions[num];
-    return(
-        <div className="content" id="question">
-            <p id="pgrNum">{num}/12</p>
+  };
+
+  const currentQuestion = questions[num];
+
+  if (!currentQuestion) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className="content" id="question">
+      <p id="pgrNum">{num}/14</p>
       <div className="progress">
         <div
           className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: `calc(100/12*${num}%)` }}
+          style={{ width: `calc(100/14*${num}%)` }}
         ></div>
       </div>
       <p id="title">{currentQuestion.title}</p>
-        <div className="question-image-container">
-            {currentQuestion.image &&(
-                <img src={currentQuestion.image} className="question-image"/>
-            )}
-        </div>
-        <button className="btn btn-warning" onClick={()=>handleAnswer(currentQuestion.type,1)}>
-            {currentQuestion.A}
-        </button>
-        <button
-        className="btn btn-warning mt-3"
-        onClick={()=>handleAnswer(currentQuestion.type,0)}>
-                {currentQuestion.B}
-
-        </button>
+      <div className="question-image-container">
+        {currentQuestion.image && (
+          <img src={currentQuestion.image} className="question-image" alt="question" />
+        )}
+      </div>
+      <button className="btn btn-warning" onClick={() => handleAnswer(currentQuestion.type, 1)}>
+        {currentQuestion.A}
+      </button>
+      <button className="btn btn-warning mt-3" onClick={() => handleAnswer(currentQuestion.type, 0)}>
+        {currentQuestion.B}
+      </button>
     </div>
-    );
+  );
 }
+
 export default Question;
